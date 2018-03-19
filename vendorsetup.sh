@@ -1,3 +1,3 @@
 for var in eng user userdebug; do
-  add_lunch_combo cos_tissot-$var
+  add_lunch_combo aoscp_tissot-$var
 done
