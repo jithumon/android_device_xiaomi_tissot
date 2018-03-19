@@ -16,11 +16,8 @@
 
 $(call inherit-product, device/xiaomi/tissot/full_tissot.mk)
 
-# Inherit some common LineageOS stuff.
-#$(call inherit-product, vendor/rr/config/common_full_phone.mk)
-
-# Inherit some COS stuff.
-$(call inherit-product, vendor/cos/common.mk)
+# Inherit some common CypherOS stuff.
+$(call inherit-product, vendor/aoscp/configs/common_full_phone.mk)
 
 # A/B updater
 AB_OTA_UPDATER := true
@@ -55,7 +52,7 @@ PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     libgptutils \
     libz
 
-PRODUCT_NAME := cos_tissot
+PRODUCT_NAME := aoscp_tissot
 BOARD_VENDOR := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
