@@ -17,7 +17,10 @@
 $(call inherit-product, device/xiaomi/tissot/full_tissot.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/rr/config/common_full_phone.mk)
+#$(call inherit-product, vendor/rr/config/common_full_phone.mk)
+
+# Inherit some COS stuff.
+$(call inherit-product, vendor/cos/common.mk)
 
 # A/B updater
 AB_OTA_UPDATER := true
@@ -52,7 +55,7 @@ PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     libgptutils \
     libz
 
-PRODUCT_NAME := rr_tissot
+PRODUCT_NAME := cos_tissot
 BOARD_VENDOR := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
@@ -62,4 +65,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="tissot-user 8.0.0 OPR1.170623.026 8.1.10 release-keys"
 
 # Unofficial build ID
-TARGET_UNOFFICIAL_BUILD_ID := TEAMOREO
+# TARGET_UNOFFICIAL_BUILD_ID := TEAMOREO
